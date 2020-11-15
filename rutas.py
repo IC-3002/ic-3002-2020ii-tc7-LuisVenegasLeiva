@@ -14,7 +14,7 @@ def encontrar_ruta( C ):
     if bucar_ruta(C, 0, 0, sol) == False:  
         return []
       
-    imprimir_ruta(sol) 
+    #imprimir_ruta(sol) 
     return sol
       
 def bucar_ruta(C, x, y, sol):      
@@ -24,8 +24,8 @@ def bucar_ruta(C, x, y, sol):
           
     if verifica(C, x, y) == True: 
         sol[x][y] = 1
-        print("x: ",x, "y: ",y)
-        imprimir_ruta(sol)
+        #print("x: ",x, "y: ",y)
+        #imprimir_ruta(sol)
           
 
         if bucar_ruta(C, x + 1, y, sol) == True: 
@@ -35,6 +35,7 @@ def bucar_ruta(C, x, y, sol):
             return True
         sol[x][y] = 0
         return False
+'''
 C = [[0, 0, 0, 0, 0, 0],
              [0, 1, 1, 1, 1, 0],
              [0, 1, 0, 0, 0, 0],
@@ -44,3 +45,4 @@ C = [[0, 0, 0, 0, 0, 0],
              [0, 0, 0, 0, 1, 0]]
                
 encontrar_ruta(C) 
+'''
